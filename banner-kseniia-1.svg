@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <clipPath id="card"><rect width="1200" height="320" rx="16"/></clipPath>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#FFFFFF" opacity="0.08"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#121418" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#121418" stop-opacity="0"/>
+    </linearGradient>
+    <g id="dog">
+      <path d="M-20 -20 L-46 -64 Q-50 -30 -34 -4"/>
+      <path d="M20 -20 L46 -64 Q50 -30 34 -4"/>
+      <path d="M-20 -20 Q0 -30 20 -20"/>
+      <path d="M-34 -4 Q-36 18 -18 30 Q0 42 18 30 Q36 18 34 -4"/>
+      <path d="M-24 22 C-32 48 -36 70 -38 92 M24 22 C32 48 36 70 38 92"/>
+      <path d="M0 16 V20 M-7 22 Q0 27 7 22"/>
+    </g>
+    <style>
+      .name  { font: 700 58px 'Segoe UI','Helvetica Neue',Arial,sans-serif; fill:#F2EEE9; letter-spacing:-1px; }
+      .mono  { font: 500 17px 'Courier New',Consolas,monospace; fill:#E58FB0; }
+      .sub   { font: 400 22px 'Segoe UI','Helvetica Neue',Arial,sans-serif; fill:#A3A7B3; }
+      .caps  { font: 600 12px 'Segoe UI','Helvetica Neue',Arial,sans-serif; fill:#6E7380; letter-spacing:4px; }
+      .cursor { animation: cur 1.1s steps(1) infinite; }
+      @keyframes cur { 50% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" fill="#121418"/>
+    <rect x="640" width="560" height="320" fill="url(#dots)"/>
+    <rect x="640" width="560" height="320" fill="url(#fade)"/>
+
+    <!-- text -->
+    <text x="72" y="100" class="mono">$ whoami</text>
+    <rect class="cursor" x="166" y="86" width="9" height="17" fill="#F2EEE9"/>
+    <text x="68" y="166" class="name">Kseniia Podgornova</text>
+    <text x="72" y="206" class="sub">Software Development Student at 42</text>
+    <rect x="72" y="234" width="36" height="2" fill="#E58FB0"/>
+    <text x="122" y="239" class="caps">CURIOUS · CREATIVE · ALWAYS LEARNING</text>
+
+    <!-- line-art dogs -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- dog 1: blaze on forehead -->
+      <g transform="translate(930 170) scale(1.35)" stroke="#F2EEE9" stroke-width="1.4">
+        <use href="#dog"/>
+        <path d="M0 -24 V4" opacity="0.6"/>
+        <ellipse cx="0" cy="11" rx="5" ry="3.6" fill="#F2EEE9" stroke="none"/>
+        <circle cx="-13" cy="-3" r="2.6" fill="#F2EEE9" stroke="none"/>
+        <circle cx="13" cy="-3" r="2.6" fill="#F2EEE9" stroke="none"/>
+      </g>
+      <!-- dog 2: tongue out, pink harness -->
+      <g transform="translate(1062 198)" stroke="#F2EEE9" stroke-width="1.8">
+        <use href="#dog"/>
+        <ellipse cx="0" cy="11" rx="5" ry="3.6" fill="#F2EEE9" stroke="none"/>
+        <circle cx="-13" cy="-3" r="2.6" fill="#F2EEE9" stroke="none"/>
+        <circle cx="13" cy="-3" r="2.6" fill="#F2EEE9" stroke="none"/>
+        <path d="M-4 24 Q-5 36 0 36 Q5 36 4 24" stroke="#E58FB0"/>
+        <path d="M-31 54 Q0 66 31 54" stroke="#E58FB0" stroke-width="3"/>
+        <path d="M31 54 C60 50 80 70 120 64" stroke="#E58FB0" stroke-width="1.6"/>
+      </g>
+    </g>
+    <path d="M840 290 H1150" stroke="#F2EEE9" stroke-width="1" opacity="0.25"/>
+  </g>
+</svg>
